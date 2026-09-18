@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Distributed Task Sheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Distributed Task Sheduler</h1>
+    <div class="dashboard">
+        <div class="summary">
+    <div class="summary-card">
+        <h3>Total Tasks</h3>
+        <p>12</p>
+    </div>
+
+    <div class="summary-card">
+        <h3>Running</h3>
+        <p>3</p>
+    </div>
+
+    <div class="summary-card">
+        <h3>Completed</h3>
+        <p>7</p>
+    </div>
+
+    <div class="summary-card">
+        <h3>Failed</h3>
+        <p>2</p>
+    </div>
+</div>
+    <section class="card">
+        <h2>Create Task</h2>
+        <input type="text" id="taskName" place holder="Enter task name">
+        <input type="datetime-local" id="taskTime">
+        
+        <button onclick="createTask()">CreateTask</button>
+    </section>
+     <section class="card">
+        <h2>Tasks</h2>
+        <Table id="taskList">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>status</th>
+                    <th>Worker</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <tbody id="taskList">
+
+    <tr>
+        <td>Email Report</td>
+        <td>Running</td>
+        <td>Worker 1</td>
+    </tr>
+
+    <tr>
+        <td>Database Backup</td>
+        <td>Completed</td>
+        <td>Worker 2</td>
+    </tr>
+
+    <tr>
+        <td>Generate Report</td>
+        <td>Pending</td>
+        <td>Worker 1</td>
+    </tr>
+
+</tbody>
+            </tbody>
+        </Table>
+     </section>
+     <section class="card">
+    <h2>Workers</h2>
+
+    <div class="worker">
+        <strong>Worker 1</strong>
+        <span>🟢 Online</span>
+    </div>
+
+    <div class="worker">
+        <strong>Worker 2</strong>
+        <span>🟢 Online</span>
+    </div>
+
+    <div class="worker">
+        <strong>Worker 3</strong>
+        <span>🔴 Offline</span>
+    </div>
+</section>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+
